@@ -11,7 +11,7 @@ class UICheckbox
 
   def tick
     args = $gtk.args
-    puts 'checkbox clicked' if args.state.mouse.up.inside_rect? [@x, @y, @w, @h]
+    puts 'checkbox clicked' if args.inputs.mouse.up.inside_rect? [@x, @y, @w, @h]
   end
 
   def draw

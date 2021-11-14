@@ -1,5 +1,5 @@
 class RightMouseButton
-  attr_accessor @up, @down
+  attr_accessor :up, :down
 
   def initialize
     @up = false
@@ -17,6 +17,8 @@ class RightMouseButton
         @down = false
       end
     end
-    @down = true if args.inputs.button_right == true
+    if args.inputs.button_right == true
+      @down = true
+    end
   end
 end

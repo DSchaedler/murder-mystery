@@ -6,7 +6,6 @@ class App
     @checkbox ||= UICheckbox.new({ x: 100, y: 100, w: 16, h: 16, state: :checked_true })
     @lmb = LeftMouseButton.new
     @rmb = RightMouseButton.new
-    
   end
 
   def tick

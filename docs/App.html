@@ -109,6 +109,33 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#lmb-instance_method" title="#lmb (instance method)">#<strong>lmb</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute lmb.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#rmb-instance_method" title="#rmb (instance method)">#<strong>rmb</strong>  &#x21d2; Object </a>
     
 
@@ -229,13 +256,15 @@
 5
 6
 7
-8</pre>
+8
+9</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/app.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@checkbox</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="UICheckbox.html" title="UICheckbox (class)">UICheckbox</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UICheckbox.html#initialize-instance_method" title="UICheckbox#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>x:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>y:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>w:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>h:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>state:</span> <span class='symbol'>:checked_true</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@lmb</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LeftMouseButton.html" title="LeftMouseButton (class)">LeftMouseButton</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LeftMouseButton.html#initialize-instance_method" title="LeftMouseButton#initialize (method)">new</a></span></span>
   <span class='ivar'>@rmb</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RightMouseButton.html" title="RightMouseButton (class)">RightMouseButton</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RightMouseButton.html#initialize-instance_method" title="RightMouseButton#initialize (method)">new</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -249,9 +278,52 @@
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="rmb=-instance_method"></span>
+      <span id="lmb=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="rmb-instance_method">
+  <h3 class="signature first" id="lmb-instance_method">
+  
+    #<strong>lmb</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute lmb.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/app.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lmb'>lmb</span>
+  <span class='ivar'>@lmb</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="rmb=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="rmb-instance_method">
   
     #<strong>rmb</strong>  &#x21d2; <tt>Object</tt> 
   
@@ -313,17 +385,17 @@
       <pre class="lines">
 
 
-10
 11
 12
 13
 14
 15
 16
-17</pre>
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/app.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'app/app.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tick'>tick</span>
   <span class='ivar'>@z_layer</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -343,7 +415,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 14 22:13:28 2021 by
+  Generated on Sun Nov 14 22:16:54 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>

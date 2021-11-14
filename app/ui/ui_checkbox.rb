@@ -1,6 +1,4 @@
 class UICheckbox
-  attr_accessor state
-
   def initialize(options = {})
     @args = $gtk.args
 

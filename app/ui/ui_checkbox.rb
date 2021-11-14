@@ -1,6 +1,5 @@
 class UICheckbox
   def initialize(options = {})
-    @args = $gtk.args
 
     @state = options[:state]
     @x = options[:x]
@@ -12,7 +11,7 @@ class UICheckbox
   end
 
   def tick
-    @args = $gtk.args
+    args = $gtk.args
     puts checkbox clicked if args.state.mouse.up.inside_rect? [@x, @y, @w, @h]
   end
 

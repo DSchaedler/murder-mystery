@@ -7,17 +7,15 @@ class UICheckbox
     @y = options[:y]
     @w = options[:w]
     @h = options[:h]
-    
-    @allowable_states = [:empty, :true, :false]
+
+    @allowable_states = %i[empty true false]
   end
 
   def tick
-    if args.state.mouse.up.inside_rect? [@x, @y, @w, @h]
-      puts checkbox clicked
-    end
+    puts checkbox clicked if args.state.mouse.up.inside_rect? [@x, @y, @w, @h]
   end
 
   def draw
-    {x: @x, y: @y, w: @w, h: @h}.border!
+    { x: @x, y: @y, w: @w, h: @h }.border!
   end
 end

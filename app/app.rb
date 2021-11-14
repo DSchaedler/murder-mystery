@@ -3,7 +3,16 @@ class App
   attr_accessor :lmb, :rmb
 
   def initialize
-    @checkbox ||= UICheckbox.new({ x: 100, y: 100, w: 16, h: 16, state: :checked_true })
+    num_x = 9
+    num_y = 9
+    starting_pos_x = 100
+    starting_pos_y = 100
+    @checkboxes = []
+    num_x.times do |x|
+      num_y.times do |y|
+        checkboxes << UICheckbox.new({ x: starting_pos_x + (x * 16), y: starting_pos_y + (x* 16), w: 16, h: 16, state: :checked_true })
+      end
+    end
     @lmb = LeftMouseButton.new
     @rmb = RightMouseButton.new
   end
@@ -13,8 +22,12 @@ class App
     @lmb.tick
     @rmb.tick
 
-    @checkbox.tick
-    @z_layer[0] << @checkbox.draw
+    @checkboxes.each do |checkbox|
+      checkbox.tick
+    end
+    @checkboxes.each do |checkbox
+      @z_layer[0] << checkbox.draw
+    end
 
     z_draw(layers: @z_layer)
   end

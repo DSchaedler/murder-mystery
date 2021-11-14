@@ -4,7 +4,7 @@ class App
   def tick
     @z_layer = Array.new(3) { [] }
 
-    @checkbox ||= UICheckbox.new({ x: 100, y: 100, w: 16, h: 16 })
+    @checkbox ||= UICheckbox.new({ x: 100, y: 100, w: 16, h: 16, state: :checked_true })
     @checkbox.tick
     @z_layer[0] << @checkbox.draw
 

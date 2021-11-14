@@ -1,4 +1,5 @@
 require 'app/app.rb'
+require 'app/draw_handler.rb'
 
 require 'app/context/context_logic_graph.rb'
 

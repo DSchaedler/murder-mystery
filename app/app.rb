@@ -12,7 +12,7 @@ class App
     while num_x > 0
       num_y = 9
       while num_y > 0
-        @checkboxes << UICheckbox.new({ x: starting_pos_x + (num_x * 16), y: starting_pos_y + (num_y* 16), w: 16, h: 16, state: :checked_true })
+        @checkboxes << UICheckbox.new({ x: starting_pos_x + (num_x * 16), y: starting_pos_y + (num_y* 16), w: 16, h: 16, state: :empty })
         num_y -= 1
       end
       num_x -= 1

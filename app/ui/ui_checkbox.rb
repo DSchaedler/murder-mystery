@@ -13,7 +13,7 @@ class UICheckbox
   def tick
     args = $gtk.args
     if args.inputs.mouse.up && args.geometry.inside_rect?([args.inputs.mouse.x, args.inputs.mouse.y, 1, 1], [@x, @y, @w, @h])
-      puts "checkbox clicked"
+      puts 'checkbox clicked'
       case @state
       when :empty || :checked_false
         @state = :checked_true

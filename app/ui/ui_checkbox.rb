@@ -3,7 +3,7 @@ class UICheckbox
 
   def initialize(options = {})
     @args = $gtk.args
-    
+
     @state = options[:state]
     @x = options[:x]
     @y = options[:y]

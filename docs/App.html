@@ -392,13 +392,17 @@
 15
 16
 17
-18</pre>
+18
+19
+20</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/app.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tick'>tick</span>
   <span class='ivar'>@z_layer</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='ivar'>@lmb</span><span class='period'>.</span><span class='id identifier rubyid_tick'>tick</span>
+  <span class='ivar'>@rmb</span><span class='period'>.</span><span class='id identifier rubyid_tick'>tick</span>
 
   <span class='ivar'>@checkbox</span><span class='period'>.</span><span class='id identifier rubyid_tick'>tick</span>
   <span class='ivar'>@z_layer</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@checkbox</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span>
@@ -415,7 +419,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 14 22:17:45 2021 by
+  Generated on Sun Nov 14 22:18:39 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>

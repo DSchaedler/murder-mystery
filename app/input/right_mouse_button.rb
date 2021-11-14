@@ -17,8 +17,6 @@ class RightMouseButton
         @down = false
       end
     end
-    if args.inputs.button_right == true
-      @down = true
-    end
+    @down = true if args.inputs.button_right == true
   end
 end

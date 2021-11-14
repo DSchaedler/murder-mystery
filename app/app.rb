@@ -10,6 +10,8 @@ class App
 
   def tick
     @z_layer = Array.new(3) { [] }
+    @lmb.tick
+    @rmb.tick
 
     @checkbox.tick
     @z_layer[0] << @checkbox.draw

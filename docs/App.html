@@ -176,7 +176,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_tick'>tick</span>
   <span class='ivar'>@z_layer</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
 
-  <span class='ivar'>@checkbox</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="UICheckbox.html" title="UICheckbox (class)">UICheckbox</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UICheckbox.html#initialize-instance_method" title="UICheckbox#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>x:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>y:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>w:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>h:</span> <span class='int'>16</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@checkbox</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="UICheckbox.html" title="UICheckbox (class)">UICheckbox</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UICheckbox.html#initialize-instance_method" title="UICheckbox#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>x:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>y:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>w:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>h:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>state:</span> <span class='symbol'>:checked_true</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@checkbox</span><span class='period'>.</span><span class='id identifier rubyid_tick'>tick</span>
   <span class='ivar'>@z_layer</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@checkbox</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span>
 
@@ -192,7 +192,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 14 21:54:11 2021 by
+  Generated on Sun Nov 14 21:56:10 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>

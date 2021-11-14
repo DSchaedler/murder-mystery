@@ -13,7 +13,7 @@ class UICheckbox
   def tick
     args = $gtk.args
     if args.inputs.mouse.up.inside_rect? [@x, @y, @w, @h]
-      case state
+      case @state
       when :empty || :false
         state = true
       when :true
@@ -21,7 +21,7 @@ class UICheckbox
       end
     end
 
-    case state
+    case @state
     when :false
       @sprite = FALSE_MARK
     when :true
@@ -29,12 +29,15 @@ class UICheckbox
     when :empty
       @sprite = :nil
     end
+
   end
 
   def draw
     draw = []
-    draw << { x: @x, y: @y, w: @w, h: @h }.border!
-    draw << { x: @x, y: @y }.merge(@sprite) unless @sprite == :nil
+    draw <<{ x: @x, y: @y, w: @w, h: @h }.border!
+    unless @sprite == :nil
+      draw << {x: @x, y: @y}.merge(@sprite)
+    end
     draw
   end
 end

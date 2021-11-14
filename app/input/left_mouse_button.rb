@@ -1,4 +1,4 @@
-class RightMouseButton
+class LeftMouseButton
   attr_accessor :up, :down
 
   def initialize
@@ -8,7 +8,7 @@ class RightMouseButton
 
   def tick
     args = $gtk.args
-    if args.inputs.button_right == false
+    if args.inputs.button_left == false
       if @down == true
         @up = true
         @down = false
@@ -17,6 +17,6 @@ class RightMouseButton
         @down = false
       end
     end
-    @down = true if args.inputs.button_right == true
+    @down = true if args.inputs.button_left == true
   end
 end

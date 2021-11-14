@@ -3,15 +3,19 @@ class App
   attr_accessor :lmb, :rmb
 
   def initialize
-    num_x = 9
-    num_y = 9
     starting_pos_x = 100
     starting_pos_y = 100
+    
     @checkboxes = []
-    num_x.times do |x|
-      num_y.times do |_y|
-        @checkboxes << UICheckbox.new({ x: starting_pos_x + (x * 16), y: starting_pos_y + (x * 16), w: 16, h: 16, state: :checked_true })
+    
+    num_x = 9
+    while num_x > 0
+      num_y = 9
+      while num_y > 0
+        @checkboxes << UICheckbox.new({ x: starting_pos_x + (x * 16), y: starting_pos_y + (x* 16), w: 16, h: 16, state: :checked_true })
+        num_y -= 1
       end
+      num_x -= 1
     end
     @lmb = LeftMouseButton.new
     @rmb = RightMouseButton.new

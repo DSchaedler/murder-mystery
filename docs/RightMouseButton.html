@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: App
+  Class: RightMouseButton
   
     &mdash; Documentation by YARD 0.9.26
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "App";
+  pathId = "RightMouseButton";
   relpath = '';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="_index.html">Index (A)</a> &raquo;
+    <a href="_index.html">Index (R)</a> &raquo;
     
     
-    <span class="title">App</span>
+    <span class="title">RightMouseButton</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: App
+      <div id="content"><h1>Class: RightMouseButton
   
   
   
@@ -74,7 +74,7 @@
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">App</li>
+            <li class="next">RightMouseButton</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>app/app.rb</dd>
+    <dd>app/input/right_mouse_button.rb</dd>
   </dl>
   
 </div>
@@ -117,7 +117,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; App </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; RightMouseButton </a>
     
 
     
@@ -134,7 +134,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>A new instance of App.</p>
+<p>A new instance of RightMouseButton.</p>
 </div></span>
   
 </li>
@@ -171,7 +171,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="App (class)">App</a></span></tt> 
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="RightMouseButton (class)">RightMouseButton</a></span></tt> 
   
 
   
@@ -180,7 +180,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns a new instance of App.</p>
+<p>Returns a new instance of RightMouseButton.</p>
 
 
   </div>
@@ -194,17 +194,17 @@
       <pre class="lines">
 
 
+4
 5
 6
-7
-8</pre>
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/app.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'app/input/right_mouse_button.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
-  <span class='ivar'>@checkbox</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="UICheckbox.html" title="UICheckbox (class)">UICheckbox</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UICheckbox.html#initialize-instance_method" title="UICheckbox#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>x:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>y:</span> <span class='int'>100</span><span class='comma'>,</span> <span class='label'>w:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>h:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>state:</span> <span class='symbol'>:checked_true</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='ivar'>@rmb</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RightMouseButton.html" title="RightMouseButton (class)">RightMouseButton</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RightMouseButton.html#initialize-instance_method" title="RightMouseButton#initialize (method)">new</a></span></span>
+  <span class='ivar'>@up</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -233,6 +233,7 @@
       <pre class="lines">
 
 
+9
 10
 11
 12
@@ -240,18 +241,27 @@
 14
 15
 16
-17</pre>
+17
+18
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/app.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'app/input/right_mouse_button.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tick'>tick</span>
-  <span class='ivar'>@z_layer</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
-
-  <span class='ivar'>@checkbox</span><span class='period'>.</span><span class='id identifier rubyid_tick'>tick</span>
-  <span class='ivar'>@z_layer</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@checkbox</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span>
-
-  <span class='id identifier rubyid_z_draw'><span class='object_link'><a href="top-level-namespace.html#z_draw-instance_method" title="#z_draw (method)">z_draw</a></span></span><span class='lparen'>(</span><span class='label'>layers:</span> <span class='ivar'>@z_layer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='gvar'>$gtk</span><span class='period'>.</span><span class='id identifier rubyid_arg'>arg</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inputs'>inputs</span><span class='period'>.</span><span class='id identifier rubyid_button_right'>button_right</span> <span class='op'>==</span> <span class='kw'>false</span>
+    <span class='kw'>if</span> <span class='ivar'>@down</span> <span class='op'>==</span> <span class='kw'>true</span>
+      <span class='ivar'>@up</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@up</span> <span class='op'>=</span> <span class='kw'>false</span>
+      <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inputs'>inputs</span><span class='period'>.</span><span class='id identifier rubyid_button_right'>button_right</span> <span class='op'>==</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>

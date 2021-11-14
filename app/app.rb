@@ -1,10 +1,7 @@
 class App
-    attr_accessor args
+  attr_accessor args
 
-    def initialize
-    end
+  def initialize; end
 
-    def tick
-    end
-
+  def tick; end
 end

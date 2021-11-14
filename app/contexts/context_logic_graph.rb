@@ -1,9 +1,7 @@
 class ContextLogicGraph
-  attr_accessor args
+  attr_accessor
 
-  def initialize
-    @args = $gtk.args
-  end
+  def initialize; end
 
   def tick; end
 end

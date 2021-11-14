@@ -29,15 +29,12 @@ class UICheckbox
     when :empty
       @sprite = :nil
     end
-
   end
 
   def draw
     draw = []
-    draw <<{ x: @x, y: @y, w: @w, h: @h }.border!
-    unless @sprite == :nil
-      draw << {x: @x, y: @y}.merge(@sprite)
-    end
+    draw << { x: @x, y: @y, w: @w, h: @h }.border!
+    draw << { x: @x, y: @y }.merge(@sprite) unless @sprite == :nil
     draw
   end
 end

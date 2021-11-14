@@ -14,7 +14,9 @@ class UICheckbox
     args = $gtk.args
     if $app.lmb.up && args.geometry.inside_rect?([args.inputs.mouse.x, args.inputs.mouse.y, 1, 1], [@x, @y, @w, @h])
       case @state
-      when :empty || :checked_false
+      when :empty
+        @state = :checked_true
+      when :checked_false
         @state = :checked_true
       when :checked_true
         @state = :empty
@@ -23,7 +25,9 @@ class UICheckbox
 
     if $app.rmb.up && args.geometry.inside_rect?([args.inputs.mouse.x, args.inputs.mouse.y, 1, 1], [@x, @y, @w, @h])
       case @state
-      when :empty || :checked_true
+      when :empty
+        @state = :checked_false
+      when :checked_true
         @state = :checked_false
       when :checked_false
         @state = :empty

@@ -25,7 +25,7 @@ class App
     @checkboxes.each do |checkbox|
       checkbox.tick
     end
-    @checkboxes.each do |checkbox
+    @checkboxes.each do |checkbox|
       @z_layer[0] << checkbox.draw
     end
 

@@ -3,5 +3,5 @@ TRUE_MARK = {
 }
 
 FALSE_MARK = {
-  w: 16: h: 16, path: 'sprites/chunky_red_x_16x_16.png'
+  w: 16, h: 16, path: 'sprites/chunky_red_x_16x_16.png'
 }

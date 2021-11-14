@@ -1,6 +1,5 @@
 class UICheckbox
   def initialize(options = {})
-
     @state = options[:state]
     @x = options[:x]
     @y = options[:y]

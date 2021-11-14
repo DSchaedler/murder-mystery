@@ -402,7 +402,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tick'>tick</span>
   <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='gvar'>$gtk</span><span class='period'>.</span><span class='id identifier rubyid_args'>args</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inputs'>inputs</span><span class='period'>.</span><span class='id identifier rubyid_button_left'>button_left</span> <span class='op'>==</span> <span class='kw'>false</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inputs'>inputs</span><span class='period'>.</span><span class='id identifier rubyid_mouse'>mouse</span><span class='period'>.</span><span class='id identifier rubyid_button_left'>button_left</span> <span class='op'>==</span> <span class='kw'>false</span>
     <span class='kw'>if</span> <span class='ivar'>@down</span> <span class='op'>==</span> <span class='kw'>true</span>
       <span class='ivar'>@up</span> <span class='op'>=</span> <span class='kw'>true</span>
       <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -411,7 +411,7 @@
       <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
-  <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inputs'>inputs</span><span class='period'>.</span><span class='id identifier rubyid_button_left'>button_left</span> <span class='op'>==</span> <span class='kw'>true</span>
+  <span class='ivar'>@down</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inputs'>inputs</span><span class='period'>.</span><span class='id identifier rubyid_mouse'>mouse</span><span class='period'>.</span><span class='id identifier rubyid_button_left'>button_left</span> <span class='op'>==</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -423,7 +423,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 14 22:18:39 2021 by
+  Generated on Sun Nov 14 22:20:19 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>

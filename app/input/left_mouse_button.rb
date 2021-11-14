@@ -8,7 +8,7 @@ class LeftMouseButton
 
   def tick
     args = $gtk.args
-    if args.inputs.button_left == false
+    if args.inputs.mouse.button_left == false
       if @down == true
         @up = true
         @down = false
@@ -17,6 +17,6 @@ class LeftMouseButton
         @down = false
       end
     end
-    @down = true if args.inputs.button_left == true
+    @down = true if args.inputs.mouse.button_left == true
   end
 end
